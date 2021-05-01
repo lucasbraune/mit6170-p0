@@ -8,21 +8,13 @@ fun basicHtmlTemplate(title: String, body: FlowContent.() -> Unit): String = bui
     appendHTML().html {
         lang = "en"
         head {
-            meta { charset = "UTF-8" }
-            meta {
-                name = "viewport"
-                content = "width=device-width, initial-scale=1"
-            }
+            meta(charset="UTF-8") {}
+            meta(name="viewport", content="width=device-width, initial-scale=1") {}
             title { +title }
-            link {
-                href = "bootstrap.css"
-                rel = "stylesheet"
-            }
+            link(href="bootstrap.css", rel="stylesheet") {}
         }
         body {
-            div(classes = "container") {
-                body()
-            }
+            div(classes = "container") { body() }
         }
     }
 }
