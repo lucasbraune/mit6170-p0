@@ -19,7 +19,7 @@ fun basicHtmlTemplate(title: String, body: FlowContent.() -> Unit): String = bui
     }
 }
 
-fun helloPage(): String = basicHtmlTemplate("Hello Page") {
+fun helloPage(): String = basicHtmlTemplate("Modified Hello Page") {
     div {
         h1 { +"Dynamic hello!" }
         hr {}
